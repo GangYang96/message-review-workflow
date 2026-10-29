@@ -1,0 +1,6 @@
+TYPE: COMPLIANCE_QUERY
+REFERENCE: DEMO-FX-2026-0081
+DIRECTION: INBOUND
+INSTITUTION: DEMO CLEARING UNIT
+DEADLINE: 2026-11-05
+DETAILS: Please provide the purpose of this synthetic transfer and supporting documents.

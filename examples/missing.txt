@@ -1,0 +1,5 @@
+TYPE: COMPLIANCE_QUERY
+REFERENCE: DEMO-FX-2026-0082
+DIRECTION: OUTBOUND
+INSTITUTION: DEMO SETTLEMENT UNIT
+DETAILS: Supporting documents are required. Please confirm the response deadline.

@@ -1,0 +1,83 @@
+{
+  "synthetic": true,
+  "scope": "Independent schema-based public prototype",
+  "source": "TYPE: COMPLIANCE_QUERY\nREFERENCE: DEMO-FX-2026-0082\nDIRECTION: OUTBOUND\nINSTITUTION: DEMO SETTLEMENT UNIT\nDETAILS: Supporting documents are required. Please confirm the response deadline.\n",
+  "original": {
+    "type": "COMPLIANCE_QUERY",
+    "lines": [
+      "TYPE: COMPLIANCE_QUERY",
+      "REFERENCE: DEMO-FX-2026-0082",
+      "DIRECTION: OUTBOUND",
+      "INSTITUTION: DEMO SETTLEMENT UNIT",
+      "DETAILS: Supporting documents are required. Please confirm the response deadline.",
+      ""
+    ],
+    "fields": {
+      "REFERENCE": {
+        "value": "DEMO-FX-2026-0082",
+        "issue": "",
+        "evidence": [
+          {
+            "value": "DEMO-FX-2026-0082",
+            "line": 2,
+            "source": "REFERENCE: DEMO-FX-2026-0082"
+          }
+        ],
+        "required": true
+      },
+      "DIRECTION": {
+        "value": "OUTBOUND",
+        "issue": "",
+        "evidence": [
+          {
+            "value": "OUTBOUND",
+            "line": 3,
+            "source": "DIRECTION: OUTBOUND"
+          }
+        ],
+        "required": true
+      },
+      "INSTITUTION": {
+        "value": "DEMO SETTLEMENT UNIT",
+        "issue": "",
+        "evidence": [
+          {
+            "value": "DEMO SETTLEMENT UNIT",
+            "line": 4,
+            "source": "INSTITUTION: DEMO SETTLEMENT UNIT"
+          }
+        ],
+        "required": true
+      },
+      "DEADLINE": {
+        "value": "",
+        "issue": "MISSING",
+        "evidence": [],
+        "required": true
+      },
+      "REASON": {
+        "value": "",
+        "issue": "",
+        "evidence": [],
+        "required": false
+      }
+    },
+    "typeIssue": false,
+    "required": [
+      "REFERENCE",
+      "DIRECTION",
+      "INSTITUTION",
+      "DEADLINE"
+    ]
+  },
+  "corrected": {
+    "REFERENCE": "DEMO-FX-2026-0082",
+    "DIRECTION": "OUTBOUND",
+    "INSTITUTION": "DEMO SETTLEMENT UNIT",
+    "DEADLINE": "2026-11-05"
+  },
+  "issues": [],
+  "state": "approved",
+  "reviewer": "Demo reviewer",
+  "notes": "Synthetic follow-up confirms deadline"
+}

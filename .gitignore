@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+outputs/
+data/local/
+*.log
+*.db
+*.sqlite
+__pycache__/
+.DS_Store
+Thumbs.db
