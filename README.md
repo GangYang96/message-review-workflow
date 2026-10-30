@@ -25,6 +25,23 @@ node --test tests/*.test.cjs
 
 CLI 默认输出 JSON 到终端；添加 `--output outputs/result.json` 保存文件。输出文件已存在时会报错，需使用新文件名。所有命令从仓库根目录运行。
 
+
+## v1.1.0 · 可恢复的复核待办与修改历史
+
+- 最多100笔报文的待办队列，按复核状态筛选；显式保存到当前浏览器，刷新后恢复。
+- 版本化状态转换：修订、确认、退回、重新复核；已完成记录锁定，重开必须填写原因。
+- 原文保持不变，每次修订保存字段快照，保留复核人、说明和时间；JSON 存档通过状态重放校验。
+- 批量 CLI、待办包导入导出，以及同一浏览器多个标签页保存时的冲突检查。
+
+选择缺失时限样例 → 解析入队 → 补充 DEADLINE → 填写复核依据 → 确认复核 → 保存到本机 → 刷新恢复。填写重新复核原因后重开，查看历史中仍保留上次决定。可新增第二条报文，或导入 examples/queue.json。
+
+```sh
+node scripts/batch.cjs --input examples/batch.json --at 2026-10-30T00:00:00.000Z --output outputs/reviews.json
+node scripts/batch.cjs --restore examples/queue.json
+```
+
+新增逻辑见 [src/workflow.js](src/workflow.js)，数据格式和边界见 [设计说明](docs/architecture.md)。全部 21 项 Node 测试通过；版本变更见 [CHANGELOG.md](CHANGELOG.md)。
+
 ## 仓库内容
 
 | 路径 | 内容 |
@@ -53,3 +70,5 @@ CLI 默认输出 JSON 到终端；添加 `--output outputs/result.json` 保存�
 ## English
 
 Schema-based message extraction, source citations and human-review decisions with synthetic fixtures. Open `index.html` directly, or serve this folder with Python. The browser and CLI use the same `src/core.js`. This is an independent, AI-assisted public prototype using synthetic fixtures, published in October 2026; it is not the original employer system, a model benchmark, or a production service.
+
+Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md). Version 1.1 adds 可恢复的复核待办与修改历史; browser and CLI share the new module.

@@ -1,6 +1,6 @@
 {
   "name": "message-review-workflow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Schema-based message extraction, source citations and human-review decisions with synthetic fixtures.",
   "license": "MIT",
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "node --test tests/*.test.cjs",
-    "example": "node scripts/review.cjs --input examples/missing.txt --corrections examples/corrections.json --reviewer \"Demo reviewer\" --notes \"Synthetic follow-up confirms deadline\" --decision approve"
+    "example": "node scripts/review.cjs --input examples/missing.txt --corrections examples/corrections.json --reviewer \"Demo reviewer\" --notes \"Synthetic follow-up confirms deadline\" --decision approve",
+    "batch": "node scripts/batch.cjs --input examples/batch.json --at 2026-10-30T00:00:00.000Z"
   }
 }

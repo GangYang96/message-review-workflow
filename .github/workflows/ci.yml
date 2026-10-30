@@ -16,3 +16,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: node --test tests/*.test.cjs
+      - run: npm run example
+      - run: npm run batch

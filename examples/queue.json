@@ -1,0 +1,121 @@
+{
+  "queue": {
+    "schema_version": 1,
+    "kind": "message-review-queue",
+    "records": [
+      {
+        "id": "CASE-001",
+        "events": [
+          {
+            "action": "create",
+            "source": "TYPE: COMPLIANCE_QUERY\nREFERENCE: DEMO-FX-2026-0081\nDIRECTION: INBOUND\nINSTITUTION: DEMO CLEARING UNIT\nDEADLINE: 2026-11-05\nDETAILS: Please provide the purpose of this synthetic transfer and supporting documents.",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 1
+          },
+          {
+            "action": "revise",
+            "corrected": {
+              "REFERENCE": "DEMO-FX-2026-0081",
+              "DIRECTION": "INBOUND",
+              "INSTITUTION": "DEMO CLEARING UNIT",
+              "DEADLINE": "2026-11-05"
+            },
+            "notes": "",
+            "reviewer": "Demo reviewer",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 2
+          },
+          {
+            "action": "approve",
+            "reviewer": "Demo reviewer",
+            "notes": "",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 3
+          }
+        ]
+      },
+      {
+        "id": "CASE-002",
+        "events": [
+          {
+            "action": "create",
+            "source": "TYPE: COMPLIANCE_QUERY\nREFERENCE: DEMO-FX-2026-0082\nDIRECTION: OUTBOUND\nINSTITUTION: DEMO SETTLEMENT UNIT\nDETAILS: Supporting documents are required. Please confirm the response deadline.",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 1
+          },
+          {
+            "action": "revise",
+            "corrected": {
+              "REFERENCE": "DEMO-FX-2026-0082",
+              "DIRECTION": "OUTBOUND",
+              "INSTITUTION": "DEMO SETTLEMENT UNIT",
+              "DEADLINE": "2026-11-05"
+            },
+            "notes": "Synthetic follow-up confirms the deadline.",
+            "reviewer": "Demo reviewer",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 2
+          },
+          {
+            "action": "approve",
+            "reviewer": "Demo reviewer",
+            "notes": "Synthetic follow-up confirms the deadline.",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 3
+          }
+        ]
+      },
+      {
+        "id": "CASE-003",
+        "events": [
+          {
+            "action": "create",
+            "source": "TYPE: RETURN_NOTICE\nREFERENCE: DEMO-FX-2026-0083\nDIRECTION: INBOUND\nINSTITUTION: DEMO SETTLEMENT UNIT\nREASON: BENEFICIARY_DETAILS_INCOMPLETE\nREFERENCE: DEMO-FX-2026-0099\nDETAILS: Conflicting references require manual clarification.",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 1
+          },
+          {
+            "action": "revise",
+            "corrected": {
+              "REFERENCE": "DEMO-FX-2026-0083",
+              "DIRECTION": "INBOUND",
+              "INSTITUTION": "DEMO SETTLEMENT UNIT",
+              "REASON": "BENEFICIARY_DETAILS_INCOMPLETE"
+            },
+            "notes": "Request a corrected reference.",
+            "reviewer": "Demo reviewer",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 2
+          },
+          {
+            "action": "return",
+            "reviewer": "Demo reviewer",
+            "notes": "Request a corrected reference.",
+            "at": "2026-10-30T00:00:00.000Z",
+            "revision": 3
+          }
+        ]
+      }
+    ]
+  },
+  "summary": [
+    {
+      "id": "CASE-001",
+      "state": "approved",
+      "revision": 3,
+      "issues": []
+    },
+    {
+      "id": "CASE-002",
+      "state": "approved",
+      "revision": 3,
+      "issues": []
+    },
+    {
+      "id": "CASE-003",
+      "state": "returned",
+      "revision": 3,
+      "issues": []
+    }
+  ]
+}

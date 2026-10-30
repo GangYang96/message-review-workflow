@@ -1,0 +1,25 @@
+[
+  {
+    "id": "CASE-001",
+    "source": "TYPE: COMPLIANCE_QUERY\nREFERENCE: DEMO-FX-2026-0081\nDIRECTION: INBOUND\nINSTITUTION: DEMO CLEARING UNIT\nDEADLINE: 2026-11-05\nDETAILS: Please provide the purpose of this synthetic transfer and supporting documents.",
+    "reviewer": "Demo reviewer",
+    "decision": "approve"
+  },
+  {
+    "id": "CASE-002",
+    "source": "TYPE: COMPLIANCE_QUERY\nREFERENCE: DEMO-FX-2026-0082\nDIRECTION: OUTBOUND\nINSTITUTION: DEMO SETTLEMENT UNIT\nDETAILS: Supporting documents are required. Please confirm the response deadline.",
+    "notes": "Synthetic follow-up confirms the deadline.",
+    "corrections": {
+      "DEADLINE": "2026-11-05"
+    },
+    "reviewer": "Demo reviewer",
+    "decision": "approve"
+  },
+  {
+    "id": "CASE-003",
+    "source": "TYPE: RETURN_NOTICE\nREFERENCE: DEMO-FX-2026-0083\nDIRECTION: INBOUND\nINSTITUTION: DEMO SETTLEMENT UNIT\nREASON: BENEFICIARY_DETAILS_INCOMPLETE\nREFERENCE: DEMO-FX-2026-0099\nDETAILS: Conflicting references require manual clarification.",
+    "notes": "Request a corrected reference.",
+    "reviewer": "Demo reviewer",
+    "decision": "return"
+  }
+]
